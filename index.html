@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Private Site</title>
+  <script>
+    function checkPassword() {
+      const password = document.getElementById("password").value;
+      if (password === "mySecret123") {
+        document.getElementById("content").style.display = "block";
+        document.getElementById("login").style.display = "none";
+      } else {
+        alert("Wrong password!");
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="login">
+    <h2>Enter Password to View</h2>
+    <input type="password" id="password" />
+    <button onclick="checkPassword()">Enter</button>
+  </div>
+
+  <div id="content" style="display:none;">
+    <h1>Welcome to My Private Website</h1>
+    <p>This is only for one person!</p>
+  </div>
+</body>
+</html>
